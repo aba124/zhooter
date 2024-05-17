@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+#game-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hud {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#health-bar-container {
+    width: 200px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#health-bar {
+    height: 100%;
+    width: 100%;
+    background-color: #f00;
+    border-radius: 5px;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#game-over h1 {
+    margin: 0;
+}
+
+#restart-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#compass {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px; /* Adjust size as needed */
+    height: 5px; /* Adjust size as needed */
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%; /* Make it a circle */
+    z-index: 999; /* Ensure it's above other elements */
+}
